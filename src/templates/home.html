@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    {% load  socialaccount%}
+    {% if request.user.is_authenticated %}
+        You are signed in as {{ request.user.username }}
+        <a href="logout">Logout</a>
+    {% else %}
+        <h2>Google Login</h2>
+        <a href="{% provider_login_url 'google' %}?next=/">Login with Google</a>
+    {% endif %}
+</body>
+</html>
