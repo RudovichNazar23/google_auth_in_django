@@ -12,5 +12,5 @@ def logout_view(request):
 
 
 def view(request):
-    return render(request, "test_view.html")
+    return render(request, "login.html")
 

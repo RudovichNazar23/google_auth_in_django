@@ -3,15 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
+    <style>
+         .btn{
+
+            transition: all 0.2s ease;
+            cursor: pointer;
+         }
+
+        .btn:hover{
+            box-shadow: 5px 6px 6px 2px #e9ecef;
+            font-size: 20px;
+        }
+    </style>
 <body>
     {% load  socialaccount%}
     {% if request.user.is_authenticated %}
-        You are signed in as {{ request.user.username }}
-        <a href="logout">Logout</a>
+        <h3 class="text-center m-2"> Hello, you are signed as {{ request.user.username }}</h3>
+        <div class="d-flex flex-row">
+            <div class="container d-flex align-items-center align-content-between flex-column bg-light border border-top-0" style="height: 950px; width: 400px;">
+                <div class="container text-center rounded p-2 m-2" id="cards" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">Guitars</a>
+                </div>
+               <div class="container text-center rounded p-2 m-2" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">Bass</a>
+                </div>
+                <div class="container text-center rounded p-2 m-2" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">Piano</a>
+                </div>
+                <div class="container text-center rounded p-2 m-2" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">Drums</a>
+                </div>
+            </div>
+            <div class="container d-flex flex-row align-items-start bg-light border border-top-0" style="height: 950px">
+                <div class="card m-2" style="width: 450px;">
+                    <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18992d7b48f%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18992d7b48f%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Card1 title
+                        </h5>
+                        <p class="card-text">
+                            Card1 text
+                        </p>
+                        <a class="btn btn-primary rounded">Link</a>
+                    </div>
+                </div>
+                <div class="card m-2" style="width: 450px;">
+                    <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18992d7b48f%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18992d7b48f%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Card2 title
+                        </h5>
+                        <p class="card-text">
+                            Card2 text
+                        </p>
+                        <a class="btn btn-primary rounded">Link</a>
+                    </div>
+                </div>
+
+                <div class="card m-2" style="width: 450px;">
+                    <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_18992d7b48f%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_18992d7b48f%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Card3 title
+                        </h5>
+                        <p class="card-text">
+                            Card3 text
+                        </p>
+                        <a class="btn btn-primary rounded">Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container d-flex align-items-center flex-column bg-light border border-top-0" style="height: 950px; width: 400px;">
+                <div class="container text-center rounded p-2 m-2" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">My profile</a>
+                </div>
+               <div class="container text-center rounded p-2 m-2" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">Create post</a>
+                </div>
+                <div class="container text-center rounded p-2 m-2" style="width: 200px;">
+                    <a class="btn btn-primary m-2 p-2" style="width: 100%;">Chats</a>
+                </div>
+                <div class="container  text-center rounded p-2 m-2" style="width: 200px;">
+                    <a href="logout" class="btn btn-primary m-2 p-2" style="width: 100%;">Logout</a>
+                </div>
+            </div>
+        </div>
     {% else %}
-        <h2>Google Login</h2>
-        <a href="{% provider_login_url 'google' %}?next=/">Login with Google</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
+            <a class="navbar-brand p-2 m-auto">RockStore.com</a>
+        </nav>
+        <br>
+        <div class="d-flex align-items-center justify-content-center flex-column" style="width: 100%; height: 850px;">
+                <h3>
+                    Welcome at RockStore.com page !!!
+                </h3>
+                <a href="{% provider_login_url 'google' %}?next=/" class="btn btn-primary rounded m-2 p-2">Get started</a>
+        </div>
     {% endif %}
 </body>
 </html>
